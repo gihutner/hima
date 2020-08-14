@@ -4,7 +4,7 @@ const { Client, GuildMember } = require("discord.js");
 
 module.exports = {
 	name: 'kick',
-    description: 'kick someone beech',
+    description: 'a kick command.',
     guildOnly: true,
 	execute(message, args, Client) {
 		const { client } = require("../index.js");
@@ -43,7 +43,7 @@ module.exports = {
 			.setTitle('Member Kicked!')
 			.setDescription(`${member.user} has been kicked by ${message.author}.`)
 			.addFields(
-				{ name: '**Reason**', value: `${reason}`}
+				{ "name": '**Reason**', "value": `${reason}`}
 			)
 			.setTimestamp()
 
