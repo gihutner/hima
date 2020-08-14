@@ -2,7 +2,7 @@ const fs = require('fs');
 const Discord = require('discord.js');
 const { prefix, token } = require('./config.json');
 const Enmap = require('enmap')
-const suggies = new Enmap('suggestions')
+const suggest = new Enmap('suggestions')
 
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
@@ -20,8 +20,9 @@ const cooldowns = new Discord.Collection();
 
 client.once('ready', () => {
 	console.log('i\'m on beech!');
-	client.user.setActivity(`watching some users`);
-	suggies.defer; // this loads up enmap to real time cache
+	client.user.setActivity(``);
+	suggest.defer;
+	// this loads up enmap to real time cache
 });
 
 client.on('message', message => {
