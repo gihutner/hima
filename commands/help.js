@@ -27,7 +27,7 @@ module.exports = {
     description: 'help me beech, list my commands',
     aliases: ['commands'],
     usage: ['command name'],
-    cooldown: 5,
+    cooldown: 3,
     execute(message, args) {
         if (message.guild.members.cache.get(message.author.id).hasPermission('MANAGE_CHANNELS')) {
             return message.reply(manager_helpemb);
