@@ -12,6 +12,7 @@ const normal_helpemb = new Discord.MessageEmbed()
 const manager_helpemb = new Discord.MessageEmbed()
 .setColor('#FFFEC8')
 .setTitle('Himawari\'s Help Center')
+    .setDescription('`[ ]` - **Mandatory** || `< >` - **Optional**')
 .addFields(
     { name: '**<a:hima_music:734252375052910633> | My commands**', value: '`h.avatar` \n `h.pet [pet name]`' },
     { name: '**<a:hima_music:734252375052910633> | Moderator Commands**', value: '`h.kick [user] <reason>` \n `h.ban [user] <reason>` \n `h.delete [# of messages]` ', inline: true},
