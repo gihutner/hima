@@ -22,6 +22,7 @@ client.once('ready', () => {
 	console.log('i\'m on beech!');
 	client.user.setActivity(`watching ${client.guilds.cache.size} guilds..`)
 	suggest.defer;
+
 	// this loads up enmap to real time cache
 });
 
