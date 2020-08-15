@@ -1,4 +1,5 @@
 const default_color = require('../index.js')
+const Discord = require('../index.js');
 
 module.exports = {
 	name: 'ping',
