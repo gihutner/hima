@@ -14,14 +14,9 @@ module.exports = {
         let minutes = Math.floor(totalSeconds / 60);
         let seconds = Math.floor(totalSeconds % 60);
 
-        let uptime = `${days} day, ${hours} hours, ${minutes} minutes and ${seconds} seconds`
+        let uptime = `${days} days, ${hours} hours, ${minutes} minutes and ${seconds} seconds`
 
-        const stats_embed = new Discord.MessageEmbed()
-            .setColor('#C8C9FF')
-            .setTitle('𝐡𝐢𝐦𝐚𝐰𝐚𝐫𝐢 — ･ﾟ')
-            .setDescription(`・ **Uptime:** ${uptime}. \n ・ **Server size:** ${client.guilds.cache.size} servers.
-            \n ・ **Owner:** eggu#0001`)
+        message.reply('```md \n ・Stats!・ \n ------ \n Uptime ・ \\`${uptime}\\` \n Version ・ 1.0.0 \n Owner ・ eggu#0001```');
 
-        message.reply(stats_embed);
     },
 };
