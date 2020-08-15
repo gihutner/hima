@@ -34,7 +34,7 @@ const no_perms = new Discord.MessageEmbed()
 
         } catch (error) { // if trying failed, do the following instead (if you catch an error):
             console.error(error); // log the error to console
-            message.reply(`there was an error during evaluation: \n ```${error}````); // send a message in the channel stating there was an error
+            message.reply(`there was an error during evaluation:\n\`${error.message}\``); // send a message in the channel stating there was an error
         }
     }
 }
