@@ -11,7 +11,7 @@ module.exports = {
 		// response time between when the message was received and when the message was sent
 // You can display as
 		const ping_embed = new Discord.MessageEmbed()
-			.setColor(`${default_color}`)
+			.setColor(`#FFFEC8`)
 			.setTitle('Pong!')
 			.setDescription(`**API Ping:** \`${apiPing}\`\n**Response Time:** \`${responseTime}ms\``)
 
