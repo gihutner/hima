@@ -18,8 +18,8 @@ module.exports = {
 
         const stats_embed = new Discord.MessageEmbed()
             .setColor('#FFFEC8')
-            .setTitle('<a:hima_chickheart:744222507095162921>・Stats!・')
-            .setDescription(`. . . . . . . . . . . . . . . . . . . . . . . . \n **Uptime** ・ ${uptime} \n **Version** ・ 1.0.0 \n **Owner** ・ \`eggu#0001\``)
+            .setTitle('<:hima_chickheart:735262386893750302>・Stats!・')
+            .setDescription(`. . . . . . . . . . . . . . . . . . . . . . . . \n **Uptime** ・ ${uptime} \n **Version** ・ 1.0.0 \n **Created on** ・ ${client.user.createdAt}`)
             .setFooter('© eggu#0001', 'https://cdn.discordapp.com/avatars/697195772919414884/734abe1afbb98ad3f140fcff8da84416.png')
 
         message.reply(stats_embed);
