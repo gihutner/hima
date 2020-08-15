@@ -24,8 +24,7 @@ const no_perms = new Discord.MessageEmbed()
             evaled = await eval(args.join(' '));
             // wait for the eval function to execute the code. This is done within the base of javascript. As parameter, we pass through all arguments and paste them together with a space.
             // So "test 1 2 3" will be pasted in like it should, as args is an array(["test", "1", "2", "3"]), it'll become "test 1 2 3", get it? Awesome
-            const ev_command = inspect(evaled)
-            message.channel.send('```${ev_command}```');
+            message.channel.send(inspect(evaled));
             // send the output of the evaluation in the channel through the inspect function built into the utils.
             // More about the function here cause it's lengthy: https://nodejs.org/api/util.html#util_util_inspect_object_options
 
