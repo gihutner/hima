@@ -14,9 +14,15 @@ module.exports = {
         let minutes = Math.floor(totalSeconds / 60);
         let seconds = Math.floor(totalSeconds % 60);
 
-        let uptime = `${days} days, ${hours} hours, ${minutes} minutes and ${seconds} seconds`
+        let uptime = `${days} days, ${hours} hours, ${minutes} minutes and ${seconds} seconds`;
 
-        message.reply('```md \n ・Stats!・ \n ------ \n Uptime ・ \\`${uptime}\\` \n Version ・ 1.0.0 \n Owner ・ eggu#0001```');
+        const stats_embed = new Discord.MessageEmbed()
+            .setColor('#FFFEC8')
+            .setTitle('<a:hima_chickheart:735262386893750302>・Stats!・')
+            .setDescription(`------ \n Uptime ・ ${uptime} \n Version ・ 1.0.0 \n Owner ・ \`eggu#0001\``)
+            .setFooter('© eggu#0001', 'https://cdn.discordapp.com/avatars/697195772919414884/734abe1afbb98ad3f140fcff8da84416.png')
+
+        message.reply(stats_embed);
 
     },
 };
