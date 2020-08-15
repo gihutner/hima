@@ -66,6 +66,7 @@ client.on('message', message => {
 		}
 	}
 
+	const default_color = '#FFFEC8';
 
 	timestamps.set(message.author.id, now);
 	setTimeout(() => timestamps.delete(message.author.id), cooldownAmount);
