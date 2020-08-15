@@ -12,7 +12,7 @@ module.exports = {
 		const ping_embed = new Discord.MessageEmbed()
 			.setColor(`#FFFEC8`)
 			.setTitle('Pong!')
-			.setDescription(`・ **Response** Latency is: **${response_latency}** \n ・ **Api** Latency is: **${api_latency}**`)
+			.setDescription(`・ **Response** Latency is: **${response_latency}** \n ・ **API** Latency is: **${api_latency}**`)
 
 		message.reply(ping_embed);
 	},
