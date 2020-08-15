@@ -9,9 +9,6 @@ module.exports = {
 		const ping_embed = new Discord.MessageEmbed()
 			.setColor(`#FFFEC8`)
 			.setTitle('Pong!')
-			.addField(
-				{ name: '**Uptime:**', value: client.uptime}
-			)
 			.setDescription(`beep boop`)
 
 		message.reply(ping_embed);
