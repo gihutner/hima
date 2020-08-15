@@ -1,5 +1,4 @@
 const Discord = require('discord.js');
-const default_color = require('../index.js')
 
 module.exports = {
 	name: 'ping',
