@@ -29,7 +29,7 @@ module.exports = {
 				message.channel.send("No reason provided..estupido..");
 			}
 
-            member.ban(reason)
+            member.ban()
 
                 .catch(error => message.reply(`I couldn't ban because of : ${error}`));
 
