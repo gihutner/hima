@@ -23,11 +23,11 @@ module.exports = {
 
                 message.reply(no_ban_perms);
             }
-			let reason = args.slice(1).join(' ') || 'None';
+			let reason = args.slice(1).join(' ');
 
             member.ban(reason)
 
-                .catch(error => message.reply(`Sorry ${message.author} I couldn't ban because of : ${error}`));
+                .catch(error => message.reply(`I couldn't ban because of : ${error}`));
 
 			let ban_log = new Discord.MessageEmbed()
 			.setColor('#FF9F9F')
