@@ -23,11 +23,14 @@ module.exports = {
 
                 message.reply(no_ban_perms);
             }
-			let reason = args.slice(1).join(' ') || 'None';
+			const Enmap = require('enmap')
+			const ban_cases = new Enmap('ban_cases')
+			const currentBanCaseCount = ban_cases.count
 
-			if(!reason) {
-				message.channel.send("No reason provided..estupido..");
-			}
+			ban_cases.set(ban_cases.count + 1, {
+			})
+
+			let reason = args.slice(1).join(' ') || 'None';
 
             member.ban()
 
@@ -36,7 +39,7 @@ module.exports = {
 			let ban_log = new Discord.MessageEmbed()
 			.setColor('#ff9f9f')
 			.setAuthor('𝐡𝐢𝐦𝐚𝐰𝐚𝐫𝐢 — ･ﾟ', `https://cdn.discordapp.com/attachments/726708672272531519/742047829006221373/hmawari.jpg`)
-			.setTitle('Member Banned!')
+			.setTitle(`Ban Case #${currentBanCaseCount}`)
 			.setDescription(`${member.user} has been banned by ${message.author}.`)
 			.addFields(
 				{ name: '**Reason**', value: `${reason}`}

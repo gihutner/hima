@@ -28,17 +28,22 @@ module.exports = {
 				.setDescription(`That was the incorrect usage. Try \`h.kick [user] [reason]\`.`)
 				message.reply(wrong_kick)
 			}
+			const Enmap = require('enmap')
+			const kick_cases = new Enmap('kick_cases')
+			const currentKickCaseCount = kick_cases.count
 
+			kick_cases.set(kick_cases.count + 1, {
+			})
 			let reason = args.slice(1).join(' ') || 'None';
 
-			member.kick(reason)
+			member.kick()
 
 			.catch(error => message.reply(`Sorry ${message.author} I couldn't kick because of : ${error}`));
 
 			const kick_log = new Discord.MessageEmbed()
 			.setColor('#FF9F9F')
 			.setAuthor('𝐡𝐢𝐦𝐚𝐰𝐚𝐫𝐢 — ･ﾟ', `https://cdn.discordapp.com/attachments/726708672272531519/742047829006221373/hmawari.jpg`)
-			.setTitle('Member Kicked!')
+			.setTitle(`Kick Case #${currentKickCaseCount}`)
 			.setDescription(`${member.user} has been kicked by ${message.author}.`)
 			.addFields(
 				{ "name": '**Reason**', "value": `${reason}`}
