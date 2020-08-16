@@ -23,14 +23,18 @@ module.exports = {
 
                 message.reply(no_ban_perms);
             }
-			let reason = args.slice(1).join(' ');
+			let reason = args.slice(1).join(' ') || 'None';
+
+			if(!reason) {
+				message.channel.send("No reason provided..estupido..");
+			}
 
             member.ban(reason)
 
                 .catch(error => message.reply(`I couldn't ban because of : ${error}`));
 
 			let ban_log = new Discord.MessageEmbed()
-			.setColor('#FF9F9F')
+			.setColor('#ff9f9f')
 			.setAuthor('𝐡𝐢𝐦𝐚𝐰𝐚𝐫𝐢 — ･ﾟ', `https://cdn.discordapp.com/attachments/726708672272531519/742047829006221373/hmawari.jpg`)
 			.setTitle('Member Banned!')
 			.setDescription(`${member.user} has been banned by ${message.author}.`)
