@@ -29,10 +29,8 @@ module.exports = {
 				message.reply(wrong_kick)
 			}
 
-			let reason = args.slice(1).join(' ');
-			if(!reason) {
-				message.channel.send("No reason provided..");
-			}
+			let reason = args.slice(1).join(' ') || 'None';
+
 			member.kick(reason)
 
 			.catch(error => message.reply(`Sorry ${message.author} I couldn't kick because of : ${error}`));
@@ -47,7 +45,7 @@ module.exports = {
 			)
 			.setTimestamp()
 
-			client.channels.cache.get('726966603077648464').send(kick_log);
+			client.channels.cache.get('726723128142594098').send(kick_log);
 		} else if (!message.guild.members.cache.get(message.author.id).hasPermission("KICK_MEMBERS")) {
             const no_perms = new Discord.MessageEmbed()
 .setColor('#FFFBC0')

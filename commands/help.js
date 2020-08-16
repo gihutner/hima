@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const { prefix } = require('../config.json');
 const normal_helpemb = new Discord.MessageEmbed()
 .setColor('#FFFEC8')
+    .setDescription('`[ ]` - **Mandatory** || `< >` - **Optional**')
 .setTitle('Himawari\'s Help Center')
 .addFields(
     { name: '**<a:hima_music:734252375052910633> | My commands**', value: '`h.avatar` \n `h.pet [pet name]`' },

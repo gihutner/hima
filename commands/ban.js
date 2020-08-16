@@ -8,7 +8,7 @@ module.exports = {
     guildOnly: true,
 	execute(message, args, Client) {
 		const { client } = require("../index.js");
-		if (message.guild.members.cache.get(message.author.id).hasPermission('BAN_MEMBERS')) {
+		if (message.guild.members.cache.get(message.author.id).hasPermission('BAN_MEMBERS') && args.length > 0) {
             let member = message.mentions.members.first() || message.guild.members.get(args[0]);
 			
             if (!member) {
@@ -22,13 +22,9 @@ module.exports = {
 				.setDescription('I\'m unable to ban this user. Make sure they don\'t have a role higher than mine, and check my permissions!')
 
                 message.reply(no_ban_perms);
-            } 
-			let reason = args.slice(1).join(' ');
-			
-			if(!reason) {
-				message.channel.send("No reason provided..estupido..");
-			
-			}	
+            }
+			let reason = args.slice(1).join(' ') || 'None';
+
             member.ban(reason)
 
                 .catch(error => message.reply(`Sorry ${message.author} I couldn't ban because of : ${error}`));
@@ -43,7 +39,7 @@ module.exports = {
 			)
 			.setTimestamp()
 
-			client.channels.cache.get('726966603077648464').send(ban_log);
+			client.channels.cache.get('726723128142594098').send(ban_log);
         } else if (!message.guild.members.cache.get(message.author.id).hasPermission("BAN_MEMBERS")) {
             const no_perms = new Discord.MessageEmbed()
 .setColor('#FFFBC0')
@@ -51,7 +47,7 @@ module.exports = {
 .setTitle('**Oh no!** <a:notlikethis:740955629635502141>')
 .setDescription('It seems like you don\'t have the correct permissions to use this command!')
 			message.reply(no_perms);
-		} else if (args.length === 0) {
+		} else {
 			const wrong_ban = new Discord.MessageEmbed()
             .setDescription(`That was the incorrect usage. Try \`h.ban [user] [reason]\`.`)
 			message.reply(wrong_ban)
