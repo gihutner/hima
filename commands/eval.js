@@ -43,7 +43,7 @@ const no_perms = new Discord.MessageEmbed()
                 let embed = new Discord.MessageEmbed()
                     .setColor("#FFFEC8")
                     .setTitle("\:x: Error!")
-                    .setDescription(e)
+                    .setDescription(error)
 
                 await message.channel.send(embed); // send a message in the channel stating there was an error
         }
