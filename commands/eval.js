@@ -27,11 +27,11 @@ const no_perms = new Discord.MessageEmbed()
             let embed = new Discord.MessageEmbed()
                 .setColor('#FFFEC8')
                 .setTimestamp()
-                .setTitle("Eval")
                 .setDescription(inspect(evaluated))
 
-            await message.channel.send(embed);
-            console.log(inspect(evaluated));
+            await message.channel.send();
+                let js;
+                console.log(inspect(evaluated), { code: js });
             // also send the same output to console. You don't have to do this but you could keep it this way if you keep console open cause eval can get lengthy and sometimes not
             // go through as channel message(message may have max. 2000 characters, console has no limit)
 
@@ -39,7 +39,6 @@ const no_perms = new Discord.MessageEmbed()
             console.error(error); // log the error to console
                 let embed = new Discord.MessageEmbed()
                     .setColor("#FFFEC8")
-                    .setTitle("\:x: Error!")
                     .setDescription(error)
 
                 await message.channel.send(embed); // send a message in the channel stating there was an error
