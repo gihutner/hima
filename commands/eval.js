@@ -28,6 +28,7 @@ const no_perms = new Discord.MessageEmbed()
                 .setColor('#FFFEC8')
                 .setTimestamp()
                 .setDescription(inspect(evaluated))
+                let js;
              message.channel.send(inspect(evaluated), { code: js });
                 console.log(inspect(evaluated));
             // also send the same output to console. You don't have to do this but you could keep it this way if you keep console open cause eval can get lengthy and sometimes not
