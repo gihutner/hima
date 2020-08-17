@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const { prefix, token } = require('../config.json');
 // imports discord.js and imports the prefix and token from the config.json file
-
+const { suggest } = require('../index.js')
 
 module.exports = {
     name: 'suggest',
@@ -13,17 +13,19 @@ module.exports = {
             // if the command is suggest, and the arguments length is above zero..
             const { client } = require("../index.js");
             // import the client token from the index.js file
-            const Enmap = require('enmap')
-            const suggies = new Enmap('suggestions')
 
             const currentSuggestionCount = suggies.count
 
 // add a new suggestion into the db
 
-            suggies.set(suggies.count + 1, {
+            suggest.set(suggest.count + 1, {
+                user: {
+                    id: message.author.id,
+                    tag: message.author.tag
+                },
+                timestamp: new Date().getTime(),
+                text: args.slice(1) // or whatever suggestion text it can save in the db
             })
-
-// then your new suggestion # could be currentSuggestionCount+1 and you can send it to your bootiful chnaannananel
             const suggest_emb = new Discord.MessageEmbed()
         .setColor('#DAA8FF')
         .setAuthor(`${message.author.username}#${message.author.discriminator}`, `${message.author.displayAvatarURL()}`)

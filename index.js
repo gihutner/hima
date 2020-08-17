@@ -20,13 +20,11 @@ const cooldowns = new Discord.Collection();
 
 client.once('ready', () => {
 	console.log('i\'m on beech!');
-	client.user.setActivity(`too busy being eggu\'s favorite bot!`)
-	suggest.defer;
+	client.user.setActivity(`too busy being eggu's favorite bot!`)
 
-	// this loads up enmap to real time cache
 });
 
-client.on('message', message => {
+client.on('message', async (message) => {
 	if (!message.content.startsWith(prefix) || message.author.bot) return;
 
 	const args = message.content.slice(prefix.length).trim().split(/ +/);
@@ -37,7 +35,7 @@ client.on('message', message => {
 
 	if (!command) return;
 
-	if (message.channel.type == "dm") return;
+	if (message.channel.type === "dm") return;
 
 	if (command.args && !args.length) {
 		let reply = `You didn't provide any arguments, ${message.author}!`;
@@ -48,6 +46,7 @@ client.on('message', message => {
 
 		return message.channel.send(reply);
 	}
+	await suggest.defer;
 
 	if (!cooldowns.has(command.name)) {
 		cooldowns.set(command.name, new Discord.Collection());
