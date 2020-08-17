@@ -40,7 +40,7 @@ const no_perms = new Discord.MessageEmbed()
 
         } catch (error) { // if trying failed, do the following instead (if you catch an error):
             console.error(error); // log the error to console
-                let embed = new MessageEmbed()
+                let embed = new Discord.MessageEmbed()
                     .setColor("#FFFEC8")
                     .setTitle("\:x: Error!")
                     .setDescription(e)
