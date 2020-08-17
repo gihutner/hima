@@ -8,11 +8,11 @@ module.exports = {
     aliases: ['eval'],
     async execute(message, args) {
         if (message.author.id !== ownerID) {
-            const user = message.mentions.users.first() || message.author;
+            const member = message.mentions.users.first() || message.author;
 
 const no_perms = new Discord.MessageEmbed()
 .setColor('#FFFBC0')
-.setAuthor(`${user.username}#${message.author.discriminator}`, `${user.displayAvatarURL()}`)
+.setAuthor(`${member.username}#${message.author.discriminator}`, `${member.displayAvatarURL()}`)
 .setTitle('**Oh no!** <a:notlikethis:740955629635502141>')
 .setDescription('It seems like you don\'t have the correct permissions to use this command!')
             message.reply(no_perms);
