@@ -29,7 +29,7 @@ const no_perms = new Discord.MessageEmbed()
                 .setColor('#FFFEC8')
                 .setTimestamp()
                 .setTitle("Eval")
-                .addField("To evaluate:", `\`\`\`js\n${beautify(args.join(" "), { format: "js"})}\n\`\`\``)
+                .addField("To evaluate:", `${toEval}`)
                 .addField("Evaluated:", evaluated)
                 .addField("Type of:", typeof(evaluated));
 
