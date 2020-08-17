@@ -27,7 +27,7 @@ module.exports = {
                 .setColor('#DAA8FF')
                 .setAuthor(`${message.author.username}#${message.author.discriminator}`, `${message.author.displayAvatarURL()}`)
                 .setTitle(`Suggestion #${currentSuggestionCount + 1}`)
-                .setDescription(args.join(" "))
+                .setDescription(args[1].join(" "))
                 .setFooter(`User ID: ${message.author.id}`, `https://cdn.discordapp.com/avatars/697195772919414884/734abe1afbb98ad3f140fcff8da84416.png`)
                 .setTimestamp(new Date().getTime())
             // create an embed..
