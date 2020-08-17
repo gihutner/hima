@@ -11,7 +11,7 @@ module.exports = {
         console.log(message);
         if((commands === "suggest") && (args.length > 0)) {
             // if the command is suggest, and the arguments length is above zero..
-            const { client } = require("../index.js");
+            const {client} = require("../index.js");
             // import the client token from the index.js file
             const Enmap = require('enmap')
             const suggies = new Enmap('suggestions')
@@ -20,34 +20,35 @@ module.exports = {
 
 // add a new suggestion into the db
 
-            suggies.set(suggies.count + 1, {
-            })
+            suggies.set(suggies.count + 1, {})
 
 // then your new suggestion # could be currentSuggestionCount+1 and you can send it to your bootiful chnaannananel
             const suggest_emb = new Discord.MessageEmbed()
-        .setColor('#DAA8FF')
-        .setAuthor(`${message.author.username}#${message.author.discriminator}`, `${message.author.displayAvatarURL()}`)
-        .setTitle(`Suggestion #${currentSuggestionCount+1}`)
-        .setDescription(args.join(" "))
-        .setFooter(`User ID: ${message.author.id}`, `https://cdn.discordapp.com/avatars/697195772919414884/734abe1afbb98ad3f140fcff8da84416.png`)
-        .setTimestamp(new Date().getTime())
-        // create an embed..
-        client.channels.cache.get('726755017624911912').send(suggest_emb).then(function (message) {
-            message.react("734251892938506310");
-            message.react("734251901477978145");
-            /* get the channel with an ID of 709450782096883725, and send the suggest embed.
-            AFTER it is sent, react with the two emotes.
-            
-            REMEMBER: you only need the emote IDs. not the full <:a:name:ID> thing.
-            */
+                .setColor('#DAA8FF')
+                .setAuthor(`${message.author.username}#${message.author.discriminator}`, `${message.author.displayAvatarURL()}`)
+                .setTitle(`Suggestion #${currentSuggestionCount + 1}`)
+                .setDescription(args.join(" "))
+                .setFooter(`User ID: ${message.author.id}`, `https://cdn.discordapp.com/avatars/697195772919414884/734abe1afbb98ad3f140fcff8da84416.png`)
+                .setTimestamp(new Date().getTime())
+            // create an embed..
+            client.channels.cache.get('726755017624911912').send(suggest_emb).then(function (message) {
+                message.react("734251892938506310");
+                message.react("734251901477978145");
+                /* get the channel with an ID of 709450782096883725, and send the suggest embed.
+                AFTER it is sent, react with the two emotes.
 
-        }).catch(function () {
-            return "blah blah";
-        });
-        
-        // catch the function
+                REMEMBER: you only need the emote IDs. not the full <:a:name:ID> thing.
+                */
 
-        } else {
+            }).catch(function () {
+                return "blah blah";
+            });
+
+            // catch the function
+        } else if (args[1] === 'decline'){
+            message.channel.send('hello');
+        }
+         else {
             const wrong_suggest = new Discord.MessageEmbed()
             .setDescription(`That was the incorrect usage. Try \`h.suggest [suggestion]\`.`)
             message.reply(wrong_suggest);
