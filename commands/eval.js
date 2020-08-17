@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
 const { ownerID } = require('../config.json');
 const { inspect } = require('util');
-const beautify = require("beautify")
 
 module.exports = {
     name: 'ev',
@@ -29,9 +28,7 @@ const no_perms = new Discord.MessageEmbed()
                 .setColor('#FFFEC8')
                 .setTimestamp()
                 .setTitle("Eval")
-                .addField("To evaluate:", `\`\`\`js\n${beautify(args.join(" "), { format: "js"})}\n\`\`\``)
-                .addField("Evaluated:", evaluated)
-                .addField("Type of:", typeof(evaluated));
+                .setDescription(inspect(evaluated))
 
             await message.channel.send(embed);
             console.log(inspect(evaluated));
