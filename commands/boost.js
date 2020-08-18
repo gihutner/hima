@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const { client } = require('../index.js');
 
 module.exports = {
     name: 'boost',
