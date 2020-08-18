@@ -11,8 +11,9 @@ module.exports = {
 
         if(!time) {
 
-            // Reply with this message.
-            message.reply("You need to specify a time in the second argument!");
+            const mute_embed = new Discord.MessageEmbed()
+                .setDescription('You need to specify a time in the second argument!')
+            message.reply(mute_embed);
 
             // Stop.
             return;
