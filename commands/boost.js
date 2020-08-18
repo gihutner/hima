@@ -7,6 +7,7 @@ module.exports = {
     guildOnly: true,
     execute(message, args) {
         if (message.guild.members.cache.get(message.author.id).hasPermission('MANAGE_CHANNELS')) {
+            const { client } = require('../index.js');
              const member = message.mentions.members.first();
             const boost_embed = new Discord.MessageEmbed()
                 .setColor('#DAA8FF')
