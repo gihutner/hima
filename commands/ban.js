@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const { Client, GuildMember } = require("discord.js");
+const mod_cases = require('../index.js');
 const currentModCaseCount = require('../index.js');
 
 module.exports = {
