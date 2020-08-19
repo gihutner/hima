@@ -22,6 +22,8 @@ module.exports = {
 				.setDescription('I\'m unable to ban this user. Make sure they don\'t have a role higher than mine, and check my permissions!')
 
                 message.reply(no_ban_perms);
+
+				return;
             }
 			const Enmap = require('enmap')
 			const ban_cases = new Enmap('ban_cases')
@@ -34,7 +36,7 @@ module.exports = {
 
             member.ban()
 
-                .catch(error => message.reply(`I couldn't ban because of : ${error}`));
+                .catch();
 
 			let ban_log = new Discord.MessageEmbed()
 			.setColor('#ff9f9f')
