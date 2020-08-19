@@ -20,7 +20,6 @@ module.exports = {
 
             const currentApplicationCount = apps.count
 
-// add a new suggestion into the db
 
             apps.set(apps.count + 1, {
             })

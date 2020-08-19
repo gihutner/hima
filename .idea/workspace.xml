@@ -20,7 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b67f4232-d1a2-4823-8b94-582160d0ce7a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/commands/welcome.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/welcome.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/commands/steal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/application.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/application.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/args_info.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/beep.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/boost.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/boost.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/role.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/server_info.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/config.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +89,8 @@
       <workItem from="1597556021331" duration="114000" />
       <workItem from="1597557172012" duration="26000" />
       <workItem from="1597595868245" duration="4525000" />
-      <workItem from="1597668316590" duration="8889000" />
+      <workItem from="1597668316590" duration="9407000" />
+      <workItem from="1597794182885" duration="2276000" />
     </task>
     <servers />
   </component>
