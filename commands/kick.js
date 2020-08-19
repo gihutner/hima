@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const { Client, GuildMember } = require("discord.js");
-
+const currentModCaseCount = require('../index.js');
 
 module.exports = {
 	name: 'kick',
@@ -23,27 +23,23 @@ module.exports = {
 
 				message.reply(no_kick_perms);
 
+				return;
+
 			} else if (args.length === 0) {
 				const wrong_kick = new Discord.MessageEmbed()
 				.setDescription(`That was the incorrect usage. Try \`h.kick [user] [reason]\`.`)
 				message.reply(wrong_kick)
 			}
-			const Enmap = require('enmap')
-			const kick_cases = new Enmap('kick_cases')
-			const currentKickCaseCount = kick_cases.count
-
-			kick_cases.set(kick_cases.count + 1, {
-			})
 			let reason = args.slice(1).join(' ') || 'None';
 
 			member.kick()
 
-			.catch(error => message.reply(`Sorry ${message.author} I couldn't kick because of : ${error}`));
+			.catch();
 
 			const kick_log = new Discord.MessageEmbed()
 			.setColor('#FF9F9F')
 			.setAuthor('𝐡𝐢𝐦𝐚𝐰𝐚𝐫𝐢 — ･ﾟ', `https://cdn.discordapp.com/attachments/726708672272531519/742047829006221373/hmawari.jpg`)
-			.setTitle(`Kick Case #${currentKickCaseCount}`)
+			.setTitle(`Case #${currentModCaseCount} | Kick`)
 			.setDescription(`${member.user} has been kicked by ${message.author}.`)
 			.addFields(
 				{ "name": '**Reason**', "value": `${reason}`}
