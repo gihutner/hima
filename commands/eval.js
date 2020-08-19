@@ -7,7 +7,7 @@ module.exports = {
     description: 'eval??',
     aliases: ['eval'],
     async execute(message, args) {
-        if (message.author.id !== ownerID) {
+        if (message.author.id !== this.config.ownerID) {
             const member = message.mentions.users.first() || message.author;
 
 const no_perms = new Discord.MessageEmbed()
