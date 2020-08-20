@@ -4,7 +4,7 @@ const { client } = require('../index.js');
 module.exports = {
     name: 'addautoresponder',
     execute(message, args) {
-n
+
         const { autoresponders } = client;
 
         const splitArgs = args.join(" ").split("|")
