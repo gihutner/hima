@@ -9,6 +9,7 @@ const currentModCaseCount = mod_cases.count
 mod_cases.set(mod_cases.count + 1, {
 })
 
+client.autoresponders = new Enmap ("autoresponders")
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
 
@@ -33,6 +34,16 @@ client.once('ready', async () => {
 
 client.on('message', message => {
 	if (!message.content.startsWith(prefix) || message.author.bot) return;
+	/**
+	 * @param client {import('disocrd.js').Client}
+	 * @param message {import('discord.js').Message}
+	 **/
+
+	const ar = client.autoresponders.get(message.content.toLowerCase())
+
+	if(ar){
+		message.channel.send(ar.response)
+	}
 
 	const args = message.content.slice(prefix.length).trim().split(/ +/);
 	const commandName = args.shift().toLowerCase();
@@ -53,6 +64,33 @@ client.on('message', message => {
 
 		return message.channel.send(reply);
 	}
+	/**
+	 * @param client {import('discord.js').Client}
+	 * @param message {import('discord.js').Message}
+	 * @param args {array<string>}
+	 * @returns {void}
+	 **/
+
+	const { autoresponders } = client;
+
+	const splitArgs = args.join(" ").split("|")
+	const trigger = splitArgs[0].trim()
+	const response = splitArgs.slice(1).join(" ").trim()
+
+	const existsAlready = autoresponders.get(trigger)
+
+	if(existsAlready){
+
+		return message.reply(`trigger oredi exists :naniok:`)
+
+	}
+
+	autoresponders.set(trigger.toLowerCase(), {
+		trigger,
+		response
+	})
+
+	return message.reply(`k done dumbo`)
 
 	if (!cooldowns.has(command.name)) {
 		cooldowns.set(command.name, new Discord.Collection());
