@@ -65,28 +65,7 @@ client.on('message', message => {
 		return message.channel.send(reply);
 	}
 
-	if (commandName === 'addautoresponder') {
-		const { autoresponders } = client;
-
-		const splitArgs = args.join(" ").split("|")
-		const trigger = splitArgs[0].trim()
-		const response = splitArgs.slice(1).join(" ").trim()
-
-		const existsAlready = autoresponders.get(trigger)
-
-		if(existsAlready){
-
-			return message.reply(`if i reply, means iara is dum`)
-
-		}
-
-		autoresponders.set(trigger.toLowerCase(), {
-			trigger,
-			response
-		})
-
-		return message.reply(`iara stinky`)
-	}
+	if (commandName === 'addautoresponder') {}
 
 	if (!cooldowns.has(command.name)) {
 		cooldowns.set(command.name, new Discord.Collection());
