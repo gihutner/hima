@@ -13,6 +13,7 @@ mod_cases.set(mod_cases.count + 1, {
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
 client.autoresponders = new Enmap ("autoresponders")
+console.log(client.autoresponders);
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 
 for (const file of commandFiles) {
