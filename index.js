@@ -9,10 +9,10 @@ const currentModCaseCount = mod_cases.count
 mod_cases.set(mod_cases.count + 1, {
 })
 
-client.autoresponders = new Enmap ("autoresponders")
+
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
-
+client.autoresponders = new Enmap ("autoresponders")
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 
 for (const file of commandFiles) {
