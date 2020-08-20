@@ -15,7 +15,7 @@ module.exports = {
 
         if(existsAlready){
 
-            return message.reply(`if i reply, means iara is dum`)
+            return message.reply(`it exists alweady dumi`)
 
         }
 
@@ -24,6 +24,6 @@ module.exports = {
             response
         })
 
-        return message.reply(`iara stinky`)
+        return message.reply(`okie done`)
     }
 }
