@@ -101,4 +101,4 @@ client.on('message', message => {
 
 
 // app token to log into discord
-client.login('Njk3MTk1NzcyOTE5NDE0ODg0.XozwKQ.5w2TAeew4YV3MHLJwzzTvK2LYrU');
+client.login(token);

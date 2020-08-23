@@ -10,7 +10,7 @@ module.exports = {
         const commands = message.content.split(' ')[0].substring(2);
         console.log(message);
         if((args.length > 0)) {
-            // if the command is suggest, and the arguments length is above zero..
+            // if the arguments length is above zero..
             const {client} = require("../index.js");
             // import the client token from the index.js file
             const Enmap = require('enmap')
