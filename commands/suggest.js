@@ -47,7 +47,7 @@ module.exports = {
             });
 
             // catch the function
-        } else {
+        } else if (args.length === 0){
             const wrong_suggest = new Discord.MessageEmbed()
             .setDescription(`That was the incorrect usage. Try \`h.suggest [suggestion]\`.`)
             message.reply(wrong_suggest);
