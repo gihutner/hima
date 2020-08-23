@@ -40,7 +40,7 @@ module.exports = {
             console.log(error)
             message.channel.send(`\`${error}\``);
 
-            message.channel.send(`There was an error while reloading command \`${command.name}\`:\n\`${error.message}\``);
+            message.channel.send(`There was an error while reloading command \`${command.name}\`: `);
         }
         }
     }
