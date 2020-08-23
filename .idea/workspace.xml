@@ -20,7 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b67f4232-d1a2-4823-8b94-582160d0ce7a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/commands/suggest.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/suggest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/unban.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/unban.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +55,7 @@
     <property name="javascript.nodejs.core.library.configured.version" value="12.18.3" />
     <property name="javascript.nodejs.core.library.typings.version" value="12.12.54" />
     <property name="js.last.introduce.type" value="LET" />
+    <property name="jsx.switch.disabled" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -83,7 +85,9 @@
       <workItem from="1597595868245" duration="4525000" />
       <workItem from="1597668316590" duration="9407000" />
       <workItem from="1597794182885" duration="8515000" />
-      <workItem from="1598030287653" duration="2388000" />
+      <workItem from="1598030287653" duration="2738000" />
+      <workItem from="1598146668469" duration="67000" />
+      <workItem from="1598184511579" duration="429000" />
     </task>
     <servers />
   </component>
