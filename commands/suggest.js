@@ -29,7 +29,7 @@ module.exports = {
                 .setColor('#DAA8FF')
                 .setAuthor(`${message.author.username}#${message.author.discriminator}`, `${message.author.displayAvatarURL()}`)
                 .setTitle(`Suggestion #${currentSuggestionCount + 1}`)
-                .setDescription(args[1].join(" "))
+                .setDescription(args.join(" "))
                 .setFooter(`User ID: ${message.author.id}`, `https://cdn.discordapp.com/avatars/697195772919414884/734abe1afbb98ad3f140fcff8da84416.png`)
                 .setTimestamp(new Date().getTime())
             // create an embed..
@@ -47,7 +47,7 @@ module.exports = {
             });
 
             // catch the function
-        } else if (args.length === 0){
+        } else {
             const wrong_suggest = new Discord.MessageEmbed()
             .setDescription(`That was the incorrect usage. Try \`h.suggest [suggestion]\`.`)
             message.reply(wrong_suggest);
