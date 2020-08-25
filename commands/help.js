@@ -18,7 +18,7 @@ const manager_helpemb = new Discord.MessageEmbed()
     { name: '**<a:hima_music:734252375052910633> | My commands**', value: '`h.avatar` \n `h.pet [pet name]`' },
     { name: '**<a:hima_music:734252375052910633> | Moderator Commands**', value: '`h.kick [user] <reason>` \n `h.ban [user] <reason>` \n `h.delete [# of messages]` ', inline: true},
     { name: '\u200B', value: '\u200B' },
-    { name: '**<a:hima_music:734252375052910633> | Extra Info**', value: '[invite me!](https://discord.com/api/oauth2/authorize?client_id=697195772919414884&permissions=0&scope=bot)'}
+    { name: '**<a:hima_music:734252375052910633> | Extra Info**', value: '[invite me!](https://discord.com/api/oauth2/authorize?client_id=747230852047437825&permissions=1543553200&scope=bot)'}
 )
 .setFooter('by eggu#0001')
 

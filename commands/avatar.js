@@ -5,15 +5,16 @@ module.exports = {
 	aliases: ['icon', 'pfp'],
 	execute(message) {
 		const user = message.mentions.users.first() || message.author;
+		const url = user.displayAvatarURL({ dynamic: true, size: 256});
 		const oneavatarEmbed = new Discord.MessageEmbed()
         .setTitle(`Your Avatar`)
         .setColor('#2f3137')
-		.setImage(message.author.displayAvatarURL());
+		.setImage(url);
 		
 		const multi_avatarEmbed = new Discord.MessageEmbed()
 		.setTitle(`${user.username}\'s Avatar`)
 		.setColor('#2f3137')
-		.setImage(user.displayAvatarURL());
+		.setImage(url);
 
 		if (!message.mentions.users.size) {
 			return message.channel.send(oneavatarEmbed);
