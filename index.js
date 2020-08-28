@@ -1,6 +1,5 @@
 const Discord = require('discord.js');
 const { prefix, token } = require('./config.json');
-const Enmap = require('enmap');
 
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
@@ -11,6 +10,16 @@ client.once('ready', async () => {
 });
 
 client.on('message', message => {
+	if (!message.content.startsWith(prefix) || message.author.bot) {
+		return;
+	}
+
+const args = message.content.slice(prefix.length).trim().split(/ +/);
+const command = args.shift().toLowerCase();
+
+if (command === 'ping') {
+	message.channel.send('pong');
+}
 })
-// app token to log into discord
+
 client.login(token);
