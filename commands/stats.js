@@ -3,8 +3,7 @@ const Discord = require('discord.js');
 module.exports = {
     name: 'stats',
     description: 'status about the bot!',
-    execute(message, args) {
-        const { client } = require('../index.js');
+    execute(client, message, args) {
 
         let totalSeconds = (client.uptime / 1000);
         let days = Math.floor(totalSeconds / 86400);
