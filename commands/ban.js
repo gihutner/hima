@@ -7,6 +7,7 @@ module.exports = {
 	name: 'ban',
     description: 'ban someone beech',
     guildOnly: true,
+	aliases: ['bean'],
 	execute(message, args, Client) {
 		const { client } = require("../index.js");
 		if (message.guild.members.cache.get(message.author.id).hasPermission('BAN_MEMBERS') && args.length > 0) {
@@ -47,12 +48,12 @@ module.exports = {
             const no_perms = new Discord.MessageEmbed()
 .setColor('#FFFBC0')
 .setAuthor(`${message.author.username}#${message.author.discriminator}`, `${message.author.displayAvatarURL()}`)
-.setTitle('**Oh no!** <a:notlikethis:740955629635502141>')
+.setTitle('**Oh no!** ')
 .setDescription('It seems like you don\'t have the correct permissions to use this command!')
 			message.reply(no_perms);
 		} else {
 			const wrong_ban = new Discord.MessageEmbed()
-            .setDescription(`That was the incorrect usage. Try \`h.ban [user] [reason]\`.`)
+            .setDescription(`That was the incorrect usage. Try \`;ban [user] <reason>\`.`)
 			message.reply(wrong_ban)
 		}
     },
