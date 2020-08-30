@@ -31,7 +31,7 @@ client.on('message', message => {
 		.setAuthor(`${member.username}#${message.author.discriminator}`, `${member.displayAvatarURL()}`)
 		.setTitle('**Oh no!** <a:a_nonon:749435233354514516>')
 		.setDescription('It seems like you don\'t have the correct permissions to use this command!')
-	if (!client.commands.has(command)) return;
+	if (!command) return;
 		try {
 			command.execute(client, message, args);
 		} catch (error) {
