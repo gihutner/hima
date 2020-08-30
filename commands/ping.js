@@ -8,7 +8,7 @@ module.exports = {
 		const api_latency = Math.round(client.ws.ping) + "ms"
 		const p_embed = new Discord.MessageEmbed()
 			.setColor('#FFFEC8')
-			.setDescription('Hold on..')
+			.setTitle(`Don't ping me!`)
 		const ping_embed = new Discord.MessageEmbed()
 			.setColor(`#FFFEC8`)
 			.setTitle('Pong!')
@@ -18,7 +18,7 @@ module.exports = {
 			.then((msg) => {
 				setTimeout(function(){
 					msg.edit(ping_embed);
-				}, 1000)})
+				}, 100)})
 	},
 
 };
