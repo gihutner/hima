@@ -1,5 +1,3 @@
-import * as guild from "./avatar";
-
 const Discord = require('discord.js');
 const { Client, GuildMember } = require("discord.js");
 const mod_cases = require('../index.js');
@@ -11,6 +9,7 @@ module.exports = {
     guildOnly: true,
 	execute(message, args, Client) {
 		const { client } = require("../index.js");
+		let guild;
 		const guildname = guild.name;
 		if (message.guild.members.cache.get(message.author.id).hasPermission('KICK_MEMBERS')) {
 			let member = message.mentions.members.first() || message.guild.members.get(args[0]);
