@@ -53,7 +53,7 @@ module.exports = {
 			message.reply(no_perms);
 		} else {
 			const wrong_ban = new Discord.MessageEmbed()
-            .setDescription(`That was the incorrect usage. Try \`;ban [user] <reason>\`.`)
+            .setDescription(`That was the incorrect usage. Try \`;ban [user] [reason]\`.`)
 			message.reply(wrong_ban)
 		}
     },
