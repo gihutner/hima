@@ -5,11 +5,11 @@ module.exports = {
 	description: 'Ping!',
 	execute(client, message, args) {
 		const response_latency = Date.now() - message.createdTimestamp + "ms"
-		// const api_latency = Math.round(client.ws.ping) + "ms"
+		const api_latency = Math.round(client.ws.ping) + "ms"
 		const ping_embed = new Discord.MessageEmbed()
 			.setColor(`#FFFEC8`)
 			.setTitle('Pong!')
-			.setDescription(`・ **Response** Latency is: **${response_latency}** \n ・ **API** Latency is: **${Math.round(client.ws.ping)}ms**`)
+			.setDescription(`・ **Response** Latency is: **${response_latency}** \n ・ **API** Latency is: **${api_latency}**`)
 
 		message.reply(ping_embed);
 	},
