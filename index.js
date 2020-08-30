@@ -33,7 +33,7 @@ client.on('message', message => {
 			message.reply('there was an error trying to execute that command!');
 		}
 	});
-
+const member = message.mentions.users.first() || message.author;
 const no_perms = new Discord.MessageEmbed()
 	.setColor('#FFFBC0')
 	.setAuthor(`${member.username}#${message.author.discriminator}`, `${member.displayAvatarURL()}`)
