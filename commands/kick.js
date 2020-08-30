@@ -7,8 +7,6 @@ module.exports = {
     description: 'a kick command.',
     guildOnly: true,
 	execute(message, args, Client) {
-		const { client } = require("../index.js");
-		const guildname = guild.name;
 		if (message.guild.members.cache.get(message.author.id).hasPermission('KICK_MEMBERS')) {
 			let member = message.mentions.members.first() || message.guild.members.get(args[0]);
 
@@ -34,7 +32,6 @@ module.exports = {
 
 			const kick_log = new Discord.MessageEmbed()
 			.setColor('#FF9F9F')
-			.setAuthor(guildname, `https://cdn.discordapp.com/attachments/726708672272531519/742047829006221373/hmawari.jpg`)
 			.setTitle(`Case #${currentModCaseCount} | Kick`)
 			.setDescription(`${member.user} has been kicked by ${message.author}.`)
 			.addFields(
