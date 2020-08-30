@@ -24,7 +24,11 @@ module.exports = {
             .setDescription(`. . . . . . . . . . . . . . . . . . . . . . . . \n **Uptime** ・ ${uptime} \n **Version** ・ 1.0.0 \n **Created on** ・ Tue Apr 07 2020`)
             .setFooter('© eggu#0001', 'https://cdn.discordapp.com/avatars/697195772919414884/734abe1afbb98ad3f140fcff8da84416.png')
 
-        message.reply(stats_embed).then((sentMessage) => sentMessage.edit(stats_embed_ed))
+        message.channel.send(stats_embed)
+            .then((msg) => {
+                setTimeout(function() {
+                    msg.edit(stats_embed_ed);
+                }, 1000)});
 
     },
 };
