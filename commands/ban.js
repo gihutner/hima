@@ -31,7 +31,7 @@ module.exports = {
 
             member.ban()
 
-                .catch();
+                .catch(error);
 
 			let ban_log = new Discord.MessageEmbed()
 			.setColor('#ff9f9f')

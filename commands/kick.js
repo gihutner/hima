@@ -25,6 +25,10 @@ module.exports = {
 				message.reply(no_kick_perms);
 
 				return;
+			} else if (args.length === 0) {
+				const wrong_kick = new Discord.MessageEmbed()
+					.setDescription(`That was the incorrect usage. Try \`h.kick [user] [reason]\`.`)
+				message.reply(wrong_kick)
 			}
 			let reason = args.slice(1).join(' ') || 'None';
 
@@ -50,10 +54,6 @@ module.exports = {
 .setTitle('**Oh no!** <a:notlikethis:740955629635502141>')
 .setDescription('It seems like you don\'t have the correct permissions to use this command!')
 			message.reply(no_perms);
-		} else if (args.length === 0) {
-			const wrong_kick = new Discord.MessageEmbed()
-				.setDescription(`That was the incorrect usage. Try \`h.kick [user] [reason]\`.`)
-			message.reply(wrong_kick)
 		}
 	},
 };
