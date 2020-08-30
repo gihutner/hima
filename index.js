@@ -33,7 +33,7 @@ client.on('message', message => {
 		.setDescription('It seems like you don\'t have the correct permissions to use this command!')
 	if (!command) return;
 		try {
-			command.execute(message, args);
+			command.execute(client, message, args);
 		} catch (error) {
 			console.error(error);
 			message.reply('there was an error trying to execute that command!');
