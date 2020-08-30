@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 module.exports = {
     name: 'stats',
     description: 'status about the bot!',
-    execute(client, message, args) {
+    async execute(client, message, args) {
 
         let totalSeconds = (client.uptime / 1000);
         let days = Math.floor(totalSeconds / 86400);
@@ -17,11 +17,14 @@ module.exports = {
 
         const stats_embed = new Discord.MessageEmbed()
             .setColor('#FFFEC8')
+            .setDescription('Hold on..')
+        const stats_embed_ed = new Discord.MessageEmbed()
+            .setColor('#FFFEC8')
             .setTitle('<:hima_chickheart:735262386893750302>・Stats!・')
             .setDescription(`. . . . . . . . . . . . . . . . . . . . . . . . \n **Uptime** ・ ${uptime} \n **Version** ・ 1.0.0 \n **Created on** ・ Tue Apr 07 2020`)
             .setFooter('© eggu#0001', 'https://cdn.discordapp.com/avatars/697195772919414884/734abe1afbb98ad3f140fcff8da84416.png')
-
-        message.reply(stats_embed);
+        const msg = await message.channel.send(stats_embed);
+        msg.edit(stats_embed_ed);
 
     },
 };
