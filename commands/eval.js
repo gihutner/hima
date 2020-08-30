@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const { ownerID } = require('../config.json');
 const { inspect } = require('util');
+const { no_perms } = require('../index.js');
 
 module.exports = {
     name: 'ev',
@@ -10,11 +11,6 @@ module.exports = {
         if (message.author.id !== ownerID) {
             const member = message.mentions.users.first() || message.author;
 
-const no_perms = new Discord.MessageEmbed()
-.setColor('#FFFBC0')
-.setAuthor(`${member.username}#${message.author.discriminator}`, `${member.displayAvatarURL()}`)
-.setTitle('**Oh no!** <a:notlikethis:740955629635502141>')
-.setDescription('It seems like you don\'t have the correct permissions to use this command!')
             message.reply(no_perms);
         } else {
 
