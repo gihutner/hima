@@ -6,13 +6,21 @@ module.exports = {
 	execute(client, message, args) {
 		const response_latency = Date.now() - message.createdTimestamp + "ms"
 		const api_latency = Math.round(client.ws.ping) + "ms"
+		const p_embed = new Discord.MessageEmbed()
+			.setColor('#FFFEC8')
+			.setDescription('Hold on..')
 		const ping_embed = new Discord.MessageEmbed()
 			.setColor(`#FFFEC8`)
 			.setTitle('Pong!')
 			.setDescription(`・ **Response** Latency is: **${response_latency}** \n ・ **API** Latency is: **${api_latency}**`)
 
-		message.reply(ping_embed);
+		message.channel.send(p_embed)
+			.then((msg) => {
+				setTimeout(function(){
+					msg.edit(ping_embed);
+				}, 1000)})
 	},
+
 };
 
 
