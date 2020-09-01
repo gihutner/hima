@@ -30,8 +30,8 @@ module.exports = {
                 .setTimestamp(new Date().getTime())
             // create an embed..
             client.channels.cache.get('750186609801953321').send(suggest_emb).then(function (message) {
-                message.react("750365998326218892");
-                message.react("750366022996852807");
+                message.react("747196418917269545");
+                message.react("747154437067374672");
                 /* get the channel with an ID of 709450782096883725, and send the suggest embed.
                 AFTER it is sent, react with the two emotes.
 
