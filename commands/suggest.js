@@ -14,7 +14,7 @@ module.exports = {
 
 // add a new suggestion into the db
 
-            suggies.set(suggies.count - 1, {
+            suggies.set(suggies.count - 17, {
 
             })
 
@@ -22,7 +22,7 @@ module.exports = {
             const suggest_emb = new Discord.MessageEmbed()
                 .setColor('#DAA8FF')
                 .setAuthor(`${message.author.username}#${message.author.discriminator}`, `${message.author.displayAvatarURL()}`)
-                .setTitle(`Suggestion #${currentSuggestionCount - 1}`)
+                .setTitle(`Suggestion #${currentSuggestionCount - 17}`)
                 .setDescription(args.join(" "))
                 .setFooter(`User ID: ${message.author.id}`, `https://cdn.discordapp.com/avatars/697195772919414884/734abe1afbb98ad3f140fcff8da84416.png`)
                 .setTimestamp(new Date().getTime())
