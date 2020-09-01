@@ -6,13 +6,11 @@ const { prefix, token } = require('../config.json');
 module.exports = {
     name: 'suggest',
     description: 'a simple suggestion command',
-    execute(message, args, client) {
+    execute(Client, message, args) {
         const commands = message.content.split(' ')[0].substring(2);
         console.log(message);
         if((args.length > 0)) {
             // if the arguments length is above zero..
-            const {client} = require("../index.js");
-            // import the client token from the index.js file
             const Enmap = require('enmap')
             const suggies = new Enmap('suggestions')
 
