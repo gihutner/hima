@@ -14,7 +14,7 @@ module.exports = {
 
 // add a new suggestion into the db
 
-            suggies.set(suggies.count + 1, {
+            suggies.set(suggies.count, {
 
             })
 
