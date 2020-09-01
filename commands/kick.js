@@ -49,7 +49,7 @@ module.exports = {
 			message.reply(no_perms);
 		} else {
 			const wrong_kick = new Discord.MessageEmbed()
-				.setDescription(`That was the incorrect usage. Try \`;kick [user] <\\reason\\>\`.`)
+				.setDescription("That was the incorrect usage. Try `;kick [user] <reason>`.")
 			message.reply(wrong_kick)
 		}
 	},
