@@ -10,7 +10,7 @@ module.exports = {
         if((args.length > 0)) {
             // if the arguments length is above zero..
             const Enmap = require('enmap')
-            const suggies = new Enmap('suggestions')
+      
             const currentSuggestionCount = suggies.count
 
 
@@ -30,8 +30,8 @@ module.exports = {
                 .setTimestamp(new Date().getTime())
             // create an embed..
             client.channels.cache.get('750186609801953321').send(suggest_emb).then(function (message) {
-                message.react("747196418917269545");
                 message.react("747154437067374672");
+                message.react("747196418917269545");
                 /* get the channel with an ID of 709450782096883725, and send the suggest embed.
                 AFTER it is sent, react with the two emotes.
 
