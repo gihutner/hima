@@ -7,7 +7,7 @@ module.exports = {
 	name: 'ban',
     description: 'ban someone beech',
     guildOnly: true,
-	execute(message, args, Client) {
+	execute(Client, message, args) {
 		const { client } = require("../index.js");
 		if (message.guild.members.cache.get(message.author.id).hasPermission('BAN_MEMBERS') && args.length > 0) {
             let member = message.mentions.members.first() || message.guild.members.get(args[0]);
