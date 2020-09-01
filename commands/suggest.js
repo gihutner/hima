@@ -33,9 +33,9 @@ module.exports = {
                 .setFooter(`User ID: ${message.author.id}`, `https://cdn.discordapp.com/avatars/697195772919414884/734abe1afbb98ad3f140fcff8da84416.png`)
                 .setTimestamp(new Date().getTime())
             // create an embed..
-            client.channels.cache.get('726755017624911912').send(suggest_emb).then(function (message) {
-                message.react("734251892938506310");
-                message.react("734251901477978145");
+            client.channels.cache.get('750186609801953321').send(suggest_emb).then(function (message) {
+                message.react("750365998326218892");
+                message.react("750366022996852807");
                 /* get the channel with an ID of 709450782096883725, and send the suggest embed.
                 AFTER it is sent, react with the two emotes.
 
