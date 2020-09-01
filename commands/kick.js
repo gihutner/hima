@@ -7,8 +7,8 @@ module.exports = {
     description: 'a kick command.',
     guildOnly: true,
 	execute(Client, message, args) {
-		if (message.guild.members.cache.get(message.author.id).hasPermission('KICK_MEMBERS')) {
-			let member = message.mentions.members.first() || message.guild.members.get(args[0]);
+		if (message.guild.members.cache.get(message.author.id).hasPermission('KICK_MEMBERS') && args.length > 0) {
+			let member = message.mentions.members.first();
 
 			if (!member) {
 				const not_member = new Discord.MessageEmbed()
