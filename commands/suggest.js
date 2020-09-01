@@ -6,13 +6,11 @@ module.exports = {
     description: 'a simple suggestion command',
     execute(client, message, args) {
         const commands = message.content.split(' ')[0].substring(2);
-        console.log(message);
         if((args.length > 0)) {
             // if the arguments length is above zero..
             const Enmap = require('enmap')
-      
+            const suggies = new Enmap('suggestions')
             const currentSuggestionCount = suggies.count
-
 
 // add a new suggestion into the db
 
