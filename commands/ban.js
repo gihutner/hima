@@ -1,14 +1,12 @@
 const Discord = require('discord.js');
 const { Client, GuildMember } = require("discord.js");
-const mod_cases = require('../index.js');
-const currentModCaseCount = require('../index.js');
 
 module.exports = {
 	name: 'ban',
     description: 'ban someone beech',
     guildOnly: true,
 	execute(Client, message, args) {
-		const { client } = require("../index.js");
+
 		if (message.guild.members.cache.get(message.author.id).hasPermission('BAN_MEMBERS') && args.length > 0) {
             let member = message.mentions.members.first() || message.guild.members.get(args[0]);
 			
@@ -42,7 +40,7 @@ module.exports = {
 			)
 			.setTimestamp()
 
-			client.channels.cache.get('726723128142594098').send(ban_log);
+			client.channels.cache.get('750327871679103006').send(ban_log);
         } else if (!message.guild.members.cache.get(message.author.id).hasPermission("BAN_MEMBERS")) {
             const no_perms = new Discord.MessageEmbed()
 .setColor('#FFFBC0')
