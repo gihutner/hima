@@ -47,7 +47,7 @@ module.exports = {
             // catch the function
         } else {
             const wrong_suggest = new Discord.MessageEmbed()
-            .setDescription(`That was the incorrect usage. Try \`h.suggest [suggestion]\`.`)
+            .setDescription("That was the incorrect usage. Try `;suggest [suggestion]`.")
             message.reply(wrong_suggest);
         }
         // if there are no arguments send the correct way to the same channel the user sent the message..
