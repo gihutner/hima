@@ -2,12 +2,6 @@ const fs = require('fs');
 const Discord = require('discord.js');
 const { prefix, token } = require('./config.json');
 
-const Enmap = require('Enmap');
-const cases = new Enmap('mod case count')
-const case_count = cases.count
-cases.set(cases.count + 1, {
-})
-
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
 
@@ -20,7 +14,6 @@ for (const file of commandFiles) {
 client.once('ready', async () => {
 	console.log('i\'m on beech!');
 	client.user.setActivity(`too busy being eggu's favorite bot!`)
-	await cases.defer;
 });
 
 
