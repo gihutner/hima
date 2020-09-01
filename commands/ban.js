@@ -1,5 +1,7 @@
 const Discord = require('discord.js');
 const { Client, GuildMember } = require("discord.js");
+const cases = require('../index.js');
+const case_count = require('../index.js');
 
 module.exports = {
 	name: 'ban',
@@ -33,7 +35,7 @@ module.exports = {
 			let ban_log = new Discord.MessageEmbed()
 			.setColor('#ff9f9f')
 			.setAuthor('𝐡𝐢𝐦𝐚𝐰𝐚𝐫𝐢 — ･ﾟ', `https://cdn.discordapp.com/attachments/726708672272531519/742047829006221373/hmawari.jpg`)
-			.setTitle(`Case #${currentModCaseCount} | Ban`)
+			.setTitle(`Case #${case_count} | Ban`)
 			.setDescription(`${member.user} has been banned by ${message.author}.`)
 			.addFields(
 				{ name: '**Reason**', value: `${reason}`}
@@ -50,7 +52,7 @@ module.exports = {
 			message.reply(no_perms);
 		} else {
 			const wrong_ban = new Discord.MessageEmbed()
-            .setDescription(`That was the incorrect usage. Try \`;ban [user] [reason]\`.`)
+            .setDescription("That was the incorrect usage. Try `;ban [user] <reason>`.")
 			message.reply(wrong_ban)
 		}
     },

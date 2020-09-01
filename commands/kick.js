@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
-const mod_cases = require('../index.js');
-const currentModCaseCount = require('../index.js');
+const cases = require('../index.js');
+const case_count = require('../index.js');
 
 module.exports = {
 	name: 'kick',
@@ -32,7 +32,7 @@ module.exports = {
 
 			const kick_log = new Discord.MessageEmbed()
 			.setColor('#FF9F9F')
-			.setTitle(`Case #${currentModCaseCount} | Kick`)
+			.setTitle(`Case #${case_count} | Kick`)
 			.setDescription(`${member.user} has been kicked by ${message.author}.`)
 			.addFields(
 				{ "name": '**Reason**', "value": `${reason}`}
