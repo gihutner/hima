@@ -16,9 +16,7 @@ module.exports = {
 
 // add a new suggestion into the db
 
-            suggies.set(suggies.count + 1, {
 
-            })
 
 // then your new suggestion # could be currentSuggestionCount+1 and you can send it to your bootiful chnaannananel
             const suggest_emb = new Discord.MessageEmbed()
