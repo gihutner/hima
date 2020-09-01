@@ -5,7 +5,6 @@ module.exports = {
 	name: 'delete',
 	description: 'prune that thang',
 	execute(Client, message, args) {
-		const client = require('../index.js');
 		if (message.guild.members.cache.get(message.author.id).hasPermission('MANAGE_CHANNELS')) {
 			const amount = parseInt(args[0]) + 1;
 			if (isNaN(amount)) {

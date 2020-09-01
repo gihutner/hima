@@ -7,6 +7,7 @@ module.exports = {
     name: 'suggest',
     description: 'a simple suggestion command',
     execute(Client, message, args) {
+        const client = require('../index.js');
         const commands = message.content.split(' ')[0].substring(2);
         console.log(message);
         if((args.length > 0)) {
