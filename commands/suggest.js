@@ -9,12 +9,12 @@ module.exports = {
         if((args.length > 0)) {
             // if the arguments length is above zero..
             const Enmap = require('enmap')
-            const suggies = new Enmap('suggestions')
-            const currentSuggestionCount = suggies.count
+            const suggest = new Enmap('suggestions')
+            const currentSuggestionCount = suggest.count
 
 // add a new suggestion into the db
 
-            suggies.set(suggies.count - 1, {
+            suggest.set(suggest.count + 1, {
 
             })
 
@@ -22,7 +22,7 @@ module.exports = {
             const suggest_emb = new Discord.MessageEmbed()
                 .setColor('#DAA8FF')
                 .setAuthor(`${message.author.username}#${message.author.discriminator}`, `${message.author.displayAvatarURL()}`)
-                .setTitle(`Suggestion #${currentSuggestionCount - 1}`)
+                .setTitle(`Suggestion #${currentSuggestionCount + 1}`)
                 .setDescription(args.join(" "))
                 .setFooter(`User ID: ${message.author.id}`, `https://cdn.discordapp.com/avatars/697195772919414884/734abe1afbb98ad3f140fcff8da84416.png`)
                 .setTimestamp(new Date().getTime())
