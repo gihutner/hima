@@ -12,17 +12,19 @@ module.exports = {
             const Enmap = require('enmap')
             const suggies = new Enmap('suggestions')
 
-            const currentSuggestionCount = suggies.count
+
 
 // add a new suggestion into the db
 
+            suggies.set(suggies.count + 1, {
 
+            })
 
 // then your new suggestion # could be currentSuggestionCount+1 and you can send it to your bootiful chnaannananel
             const suggest_emb = new Discord.MessageEmbed()
                 .setColor('#DAA8FF')
                 .setAuthor(`${message.author.username}#${message.author.discriminator}`, `${message.author.displayAvatarURL()}`)
-                .setTitle(`Suggestion #${currentSuggestionCount + 1}`)
+                .setTitle(`Suggestion #`)
                 .setDescription(args.join(" "))
                 .setFooter(`User ID: ${message.author.id}`, `https://cdn.discordapp.com/avatars/697195772919414884/734abe1afbb98ad3f140fcff8da84416.png`)
                 .setTimestamp(new Date().getTime())
