@@ -1,13 +1,13 @@
 const Discord = require('discord.js');
 const { ownerID } = require('../config.json');
 const { inspect } = require('util');
-const { no_perms } = require('../index.js');
+
 
 module.exports = {
     name: 'ev',
     description: 'eval??',
     aliases: ['eval'],
-    async execute(message, args) {
+    async execute(Client, message, args) {
         if (message.author.id !== ownerID) {
             const member = message.mentions.users.first() || message.author;
 
