@@ -4,7 +4,7 @@ const Discord = require('discord.js');
 module.exports = {
 	name: 'delete',
 	description: 'prune that thang',
-	execute(message, args, client) {
+	execute(Client, message, args) {
 		if (message.guild.members.cache.get(message.author.id).hasPermission('MANAGE_CHANNELS')) {
 			const amount = parseInt(args[0]) + 1;
 			if (isNaN(amount)) {
