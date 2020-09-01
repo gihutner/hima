@@ -19,6 +19,7 @@ module.exports = {
 				setTimeout(function(){
 					msg.edit(ping_embed);
 				}, 100)})
+			.catch(error)
 	},
 
 };
