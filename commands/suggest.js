@@ -1,13 +1,10 @@
 const Discord = require('discord.js');
-const { prefix, token } = require('../config.json');
-// imports discord.js and imports the prefix and token from the config.json file
 
 
 module.exports = {
     name: 'suggest',
     description: 'a simple suggestion command',
     execute(Client, message, args) {
-        const client = require('../index.js');
         const commands = message.content.split(' ')[0].substring(2);
         console.log(message);
         if((args.length > 0)) {
@@ -32,6 +29,7 @@ module.exports = {
                 .setFooter(`User ID: ${message.author.id}`, `https://cdn.discordapp.com/avatars/697195772919414884/734abe1afbb98ad3f140fcff8da84416.png`)
                 .setTimestamp(new Date().getTime())
             // create an embed..
+            let client;
             client.channels.cache.get('750186609801953321').send(suggest_emb).then(function (message) {
                 message.react("750365998326218892");
                 message.react("750366022996852807");
