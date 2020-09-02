@@ -15,7 +15,7 @@ for (const file of commandFiles) {
 client.once('ready', async () => {
 	console.log('i\'m on beech!');
 	let myGuild = client.guilds.cache.get('747096663037837453');
-	let memberCount = myGuild.members
+	let memberCount = myGuild.members.toString()
 	client.user.setActivity(`the garden..and ${memberCount} members..`, {type: 3});
 });
 
