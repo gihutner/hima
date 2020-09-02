@@ -11,10 +11,11 @@ for (const file of commandFiles) {
 	const command = require(`./commands/${file}`);
 	client.commands.set(command.name, command);
 }
-let guild = client.guilds.cache.get('747096663037837453').size;
+const guild = client.guilds.cache.get("747096663037837453");
+var memberCount = guild.members.filter(member => !member.user.bot).size;
 client.once('ready', async () => {
 	console.log('i\'m on beech!');
-	client.user.setActivity(`the garden..and ${guild} members..`, {type: 3});
+	client.user.setActivity(`the garden..and ${memberCount} members..`, {type: 3});
 });
 
 
