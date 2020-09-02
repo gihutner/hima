@@ -3,7 +3,7 @@ module.exports = {
 	name: 'avatar',
 	description: 'Get the avatar URL of the tagged user(s), or your own avatar.',
 	aliases: ['icon', 'pfp'],
-	execute(message) {
+	execute(Client, message) {
 		const user = message.mentions.users.first() || message.author;
 		const url = user.displayAvatarURL({ dynamic: true, size: 256});
 		const oneavatarEmbed = new Discord.MessageEmbed()

@@ -7,7 +7,7 @@ const normal_helpemb = new Discord.MessageEmbed()
 .addFields(
     { name: '**My commands**', value: '`;avatar` \n `;suggest [suggestion]`' },
 )
-.setFooter(':copyright: eggu#0001')
+.setFooter('© eggu#0001')
 
 const manager_helpemb = new Discord.MessageEmbed()
 .setColor('#fcd9ce')
@@ -18,7 +18,7 @@ const manager_helpemb = new Discord.MessageEmbed()
     { name: '**Moderator Commands**', value: '`;kick [user] <reason>` \n `;ban [user] <reason>` \n `;delete [# of messages]` ', inline: true},
     { name: '\u200B', value: '\u200B' },
 )
-.setFooter(':copyright: eggu#0001')
+.setFooter('©️ eggu#0001')
 
 
 module.exports = {
