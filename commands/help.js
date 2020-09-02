@@ -1,24 +1,22 @@
 const Discord = require('discord.js');
 const { prefix } = require('../config.json');
 const normal_helpemb = new Discord.MessageEmbed()
-.setColor('#FFFEC8')
+.setColor('#fcd9ce')
     .setDescription('`[ ]` - **Mandatory** || `< >` - **Optional**')
 .setTitle('Himawari\'s Help Center')
 .addFields(
-    { name: '**<a:hima_music:734252375052910633> | My commands**', value: '`h.avatar` \n `h.pet [pet name]`' },
-    { name: '**<a:hima_music:734252375052910633> | Extra Info**', value: '[invite me!](https://discord.com/api/oauth2/authorize?client_id=697195772919414884&permissions=0&scope=bot)'}
+    { name: '**My commands**', value: '`;avatar` \n `;suggest [suggestion]`' },
 )
 .setFooter('by eggu#0001')
 
 const manager_helpemb = new Discord.MessageEmbed()
-.setColor('#FFFEC8')
+.setColor('#fcd9ce')
 .setTitle('Himawari\'s Help Center')
     .setDescription('`[ ]` - **Mandatory** || `< >` - **Optional**')
 .addFields(
-    { name: '**<a:hima_music:734252375052910633> | My commands**', value: '`h.avatar` \n `h.pet [pet name]`' },
-    { name: '**<a:hima_music:734252375052910633> | Moderator Commands**', value: '`h.kick [user] <reason>` \n `h.ban [user] <reason>` \n `h.delete [# of messages]` ', inline: true},
+    { name: '**My commands**', value: '`;avatar` \n `;suggest [suggestion]`' },
+    { name: '**Moderator Commands**', value: '`;kick [user] <reason>` \n `;ban [user] <reason>` \n `;delete [# of messages]` ', inline: true},
     { name: '\u200B', value: '\u200B' },
-    { name: '**<a:hima_music:734252375052910633> | Extra Info**', value: '[invite me!](https://discord.com/api/oauth2/authorize?client_id=747230852047437825&permissions=1543553200&scope=bot)'}
 )
 .setFooter('by eggu#0001')
 
