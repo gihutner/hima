@@ -15,7 +15,15 @@ module.exports = {
 		const joinedat = user.joinedAt;
 
 		const user_info = new Discord.MessageEmbed()
-			.setDescription(user_id);
+			.setColor('#fcd9ce')
+			.setAuthor(tag, user_avatar)
+			.setThumbnail(user_avatar)
+			.addField(
+				{ name: 'Joined Here', value: joinedat},
+				{ name: 'Created Account', value: `${createdate} ${createdate_time}`, inline: true},
+				{ name: 'User Status', value: status}
+			)
+			.setFooter(`User ID: ${user_id}`)
 
 		message.channel.send(user_info);
 
