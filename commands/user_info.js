@@ -19,8 +19,8 @@ module.exports = {
 			.setAuthor(tag, user_avatar)
 			.setThumbnail(user_avatar)
 			.addField(
-				{ name: 'Joined Here', value: `${joinedat}`},
-				{ name: 'Created Account', value: `${createdate} ${createdate_time}`},
+				{ name: 'Joined Here', value: `hello`},
+				{ name: 'Created Account', value: `nani`},
 			)
 			.setFooter(`User ID: ${user_id}`)
 
