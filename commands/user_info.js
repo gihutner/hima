@@ -20,8 +20,8 @@ module.exports = {
 			.setThumbnail(user_avatar)
 			.addFields(
 				{ name: 'Joined Here', value: joinedat},
-				{ name: 'Created Account', value: `${createdate} ${createdate_time}`, inline: true},
-				{ name: 'User Status', value: status},
+				{ name: 'Created Account', value: `${createdate}`, inline: true},
+				{ name: 'User Status', value: status, inline: true},
 			)
 			.setFooter(`User ID: ${user_id}`)
 
