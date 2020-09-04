@@ -18,9 +18,10 @@ module.exports = {
 			.setColor('#fcd9ce')
 			.setAuthor(tag, user_avatar)
 			.setThumbnail(user_avatar)
-			.addField(
-				{ name: 'Joined Here', value: `hello`},
-				{ name: 'Created Account', value: `nani`},
+			.addFields(
+				{ name: 'Joined Here', value: joinedat},
+				{ name: 'Created Account', value: `${createdate} ${createdate_time}`, inline: true},
+				{ name: 'User Status', value: status},
 			)
 			.setFooter(`User ID: ${user_id}`)
 
