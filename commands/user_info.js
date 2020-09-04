@@ -10,7 +10,7 @@ module.exports = {
 		const createdate = user.createdAt;
 		const createdate_time = user.createdTimestamp;
 		const status = user.presence.status;
-		const roles = user.roles.filter(r => r.name !== '#everyone').map(role => role.name).join(', ')
+		const roles = user.member.roles.filter(r => r.name !== '#everyone').map(role => role.name).join(', ')
 		const joinedat = user.joinedAt;
 
 		const user_info = new Discord.MessageEmbed()
