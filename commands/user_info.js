@@ -5,7 +5,7 @@ module.exports = {
 	description: 'info about user',
 	aliases: ['shei'],
 	execute(Client, message, args) {
-		let user = message.guild.members.get(args[0]);
+		let user = message.guild.members.get(args[1]);
 		let member = message.guild.member(user);
 		const user_avatar = user.displayAvatarURL({ dynamic: true, size: 256});
 		const user_id = user.id;
