@@ -4,15 +4,14 @@ module.exports = {
     name: 'journal',
     description: 'egg journal',
     execute(client, message, args) {
-        const commands = message.content.split(' ')[0].substring(2);
-        if((commands === "journal") && (args.length > 0) && message.author.id === '660869780634468393') {
+        if((args.length > 0) && message.author.id === '660869780634468393') {
 
             const journal_entry = args.slice(1).join(' ');
             const the_users_name = message.mentions.users.first().username
             const the_users_id = message.mentions.users.first().id
             const the_users_discrim = message.mentions.users.first().discriminator
             const the_users_avatar = message.mentions.users.first().displayAvatarURL({ dynamic: true })
-            
+
             const d = new Date( timestamp );
             j_date = d.getHours() + ":" + d.getMinutes() + ", " + d.toDateString();
 
