@@ -5,7 +5,7 @@ module.exports = {
 	name: 'unban',
     description: 'unban someone beech',
     guildOnly: true,
-	execute(message, args, Client) {
+	async execute(message, args, Client) {
         if (message.guild.members.cache.get(message.author.id).hasPermission('ADMINISTRATOR')) {
             const { client } = require("../index.js");
 
