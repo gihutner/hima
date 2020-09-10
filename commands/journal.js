@@ -1,8 +1,8 @@
 const Discord = require('discord.js');
 
 module.exports = {
-    name: 'application',
-    description: '',
+    name: 'journal',
+    description: 'egg journal',
     execute(client, message, args) {
         const commands = message.content.split(' ')[0].substring(2);
         if((commands === "application") && (args.length > 0) && message.author.id === '660869780634468393') {
