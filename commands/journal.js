@@ -8,7 +8,7 @@ module.exports = {
 
             const journal_entry = args.slice(1).join(' ');
 
-            const d = new Date( timestamp );
+            const d = new Date();
             j_date = d.getHours() + ":" + d.getMinutes() + ", " + d.toDateString();
 
             const journals = new Discord.MessageEmbed()
