@@ -14,7 +14,7 @@ module.exports = {
             const journals = new Discord.MessageEmbed()
             .setTitle(`${j_date} Entry`)
             .setDescription(journal_entry)
-            .setColor('#36393f')
+            .setColor('#2f3137')
 
             message.delete()
             client.channels.cache.get('753663451901198386').send(journals)
