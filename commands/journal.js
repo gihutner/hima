@@ -12,15 +12,6 @@ module.exports = {
             const the_users_id = message.mentions.users.first().id
             const the_users_discrim = message.mentions.users.first().discriminator
             const the_users_avatar = message.mentions.users.first().displayAvatarURL({ dynamic: true })
-
-            const Enmap = require('enmap')
-            const journal = new Enmap('applications')
-
-            const currentEntryCount = journal.count
-
-
-            journal.set(apps.count + 1, {
-            })
             const d = new Date( timestamp );
             j_date = d.getHours() + ":" + d.getMinutes() + ", " + d.toDateString();
 
