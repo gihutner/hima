@@ -41,7 +41,7 @@ module.exports = {
 			)
 			.setTimestamp()
 
-			client.channels.cache.get('750327871679103006').send(ban_log);
+			client.channels.cache.get('747096663390421106').send(ban_log);
         } else if (!message.guild.members.cache.get(message.author.id).hasPermission("BAN_MEMBERS")) {
             const no_perms = new Discord.MessageEmbed()
 .setColor('#FFFBC0')
