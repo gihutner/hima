@@ -5,7 +5,7 @@ module.exports = {
     description: 'egg journal',
     execute(client, message, args) {
         const commands = message.content.split(' ')[0].substring(2);
-        if((commands === "application") && (args.length > 0) && message.author.id === '660869780634468393') {
+        if((commands === "journal") && (args.length > 0) && message.author.id === '660869780634468393') {
 
             const journal_entry = args.slice(1).join(' ');
             const the_users_name = message.mentions.users.first().username
