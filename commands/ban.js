@@ -8,7 +8,7 @@ module.exports = {
 	execute(Client, message, args) {
 
 		if (message.guild.members.cache.get(message.author.id).hasPermission('BAN_MEMBERS') && args.length > 0) {
-            let member = message.mentions.members.first() || message.guild.members.get(args[0]);
+            let member = message.mentions.members.first() || message.guild.members.cache.get(args[0]);
 			
             if (!member) {
 				const not_member = new Discord.MessageEmbed()
