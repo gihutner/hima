@@ -6,7 +6,7 @@ module.exports = {
     execute(client, message, args) {
         if((args.length > 0) && message.author.id === '660869780634468393') {
 
-            const journal_entry = args.slice(1).join(' ');
+            const journal_entry = args.slice(0).join(' ');
 
             const d = new Date();
             j_date = d.getHours() + ":" + d.getMinutes() + ", " + d.toDateString();
