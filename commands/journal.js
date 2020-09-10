@@ -23,7 +23,7 @@ module.exports = {
             message.delete()
             client.channels.cache.get('753663451901198386').send(journals)
         } else {
-            return;
+            return 'hello'
         }
     },
 };
