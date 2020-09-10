@@ -9,7 +9,7 @@ module.exports = {
             const vent = args.slice(0).join(' ');
 
             const venti = new Discord.MessageEmbed()
-            .setAuthor(message.author)
+            .setAuthor(message.author.tag)
             .setDescription(vent)
 
             message.delete()
