@@ -12,6 +12,7 @@ module.exports = {
             const the_users_id = message.mentions.users.first().id
             const the_users_discrim = message.mentions.users.first().discriminator
             const the_users_avatar = message.mentions.users.first().displayAvatarURL({ dynamic: true })
+            
             const d = new Date( timestamp );
             j_date = d.getHours() + ":" + d.getMinutes() + ", " + d.toDateString();
 
@@ -20,7 +21,6 @@ module.exports = {
             .setDescription(journal_entry)
             .setColor('#36393f')
 
-            message.delete()
             client.channels.cache.get('753663451901198386').send(journals)
         } else {
             return 'hello'
