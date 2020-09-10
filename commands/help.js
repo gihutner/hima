@@ -15,7 +15,7 @@ const manager_helpemb = new Discord.MessageEmbed()
     .setDescription('`[ ]` - **Mandatory** || `< >` - **Optional**')
 .addFields(
     { name: '**My commands**', value: '`;avatar` \n `;suggest [suggestion]`' },
-    { name: '**Moderator Commands**', value: '`;kick [user] <reason>` \n `;ban [user] <reason>` \n `;delete [# of messages]` ', inline: true},
+    { name: '**Moderator Commands**', value: '`;kick [user] <reason>` \n `;ban [user] <reason>` \n `;delete [# of messages]` \n `;vent [content]` ', inline: true},
     { name: '\u200B', value: '\u200B' },
 )
 .setFooter('©️ eggu#0001')
