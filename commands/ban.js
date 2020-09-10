@@ -8,7 +8,7 @@ module.exports = {
 	execute(Client, message, args) {
 
 		if (message.guild.members.cache.get(message.author.id).hasPermission('BAN_MEMBERS') && args.length > 0) {
-            let member = message.mentions.members.first();
+            let member = message.mentions.members.first() || args[0];
 			
             if (!member) {
 				const not_member = new Discord.MessageEmbed()
@@ -28,7 +28,7 @@ module.exports = {
 
             member.ban()
 
-                .catch();
+                .catch(err);
 
 			let ban_log = new Discord.MessageEmbed()
 			.setColor('#ff9f9f')
