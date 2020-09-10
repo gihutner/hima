@@ -13,7 +13,7 @@ module.exports = {
             .setDescription(vent)
 
             message.delete()
-            client.channels.cache.get('749962821114134590').send(`<@&753669314405466233>, look at the vent:`, venti);
+            client.channels.cache.get('749962821114134590').send(`<@&747096663293689881>, look at the vent:`, venti);
         }
     },
 };
