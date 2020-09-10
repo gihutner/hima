@@ -43,7 +43,7 @@ module.exports = {
 			Client.channels.cache.get('747096663390421106').send(ban_log);
 			const banned = new Discord.MessageEmbed()
 			.setDescription(`${member.user} was successfully banned.`)
-			channels.reply()
+			message.channels.reply(banned);
         } else if (!message.guild.members.cache.get(message.author.id).hasPermission("BAN_MEMBERS")) {
             const no_perms = new Discord.MessageEmbed()
 .setColor('#FFFBC0')
