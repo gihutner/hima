@@ -1,5 +1,4 @@
 const Discord = require('discord.js');
-const { Client, GuildMember } = require("discord.js");
 
 module.exports = {
 	name: 'unban',
@@ -7,7 +6,6 @@ module.exports = {
     guildOnly: true,
 	async execute(message, args, Client) {
         if (message.guild.members.cache.get(message.author.id).hasPermission('ADMINISTRATOR')) {
-            const { client } = require("../index.js");
 
             let search = args.join(" ");
             if(!search) return message.channel.send("Please provide a valid ID or name.");
@@ -39,7 +37,7 @@ module.exports = {
         )
         .setTimestamp()
 
-        client.channels.cache.get('726966603077648464').send(unban_log);
+        Client.channels.cache.get('').send(unban_log);
         }
 
         if (!message.guild.members.cache.get(message.author.id).hasPermission("ADMINISTRATOR")) {
