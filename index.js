@@ -35,11 +35,7 @@ client.on('message', message => {
 		.setTitle('**Oh no!** <a:a_nonon:749435233354514516>')
 		.setDescription('It seems like you don\'t have the correct permissions to use this command!')
 
-		const thisWord = "pls rob"
-		if(message.content.includes(thisWord))
-				{
-    		message.delete()
-}
+
 	if (!command) return;
 		try {
 			command.execute(client, message, args);
