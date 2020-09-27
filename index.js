@@ -42,7 +42,7 @@ client.on('message', message => {
 		} catch (error) {
 			console.error(error);
 			const command_error = new Discord.MessageEmbed()
-			.setDescription("`I was running through meadows and fell on my face..check the console..`")
+			.setDescription("`I was running through meadows and fell on my face..`")
 			message.reply(command_error);
 		}
 	});
