@@ -41,7 +41,9 @@ client.on('message', message => {
 			command.execute(client, message, args);
 		} catch (error) {
 			console.error(error);
-			message.reply('there was an error trying to execute that command!');
+			const command_error = new Discord.MessageEmbed()
+			.setDescription("`I was running through meadows and fell on my face..check the console..`")
+			message.reply(command_error);
 		}
 	});
 
