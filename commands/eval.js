@@ -33,7 +33,7 @@ module.exports = {
             console.error(error); // log the error to console
                 let embed = new Discord.MessageEmbed()
                     .setColor("#FFFEC8")
-                    .setDescription(error)
+                    .setDescription("```error```")
 
                 await message.channel.send(embed); // send a message in the channel stating there was an error
         }
