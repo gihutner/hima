@@ -19,7 +19,7 @@ module.exports = {
 
             const toEval = args.join(" ");
             const evaluated = eval(toEval);
-            const whole_ev = "```diff\naaaaa```"
+            const whole_ev = "```js\ninespect(evaluated)```"
 
              message.channel.send(whole_ev);
                 console.log(inspect(evaluated));
