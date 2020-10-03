@@ -13,21 +13,23 @@ module.exports = {
 
             message.reply(no_perms);
         } else {
+            
 
             try {
 
+            const blah = "```Their Title\nBody text blah blah```"
+            const toEval = args.join(" ");
+            const evaluated = eval(toEval);
+            const whole_ev = inspect(evaluated);
 
-            const toEval = args.join(" ")
-            const evaluated = eval(toEval)
-
-             message.channel.send(inspect(evaluated));
+             message.channel.send(blah);
                 console.log(inspect(evaluated));
             // also send the same output to console. You don't have to do this but you could keep it this way if you keep console open cause eval can get lengthy and sometimes not
             // go through as channel message(message may have max. 2000 characters, console has no limit)
 
         } catch (error) { // if trying failed, do the following instead (if you catch an error):
             console.error(error); // log the error to console
-            message.channel.send('aaaa'); // send a message in the channel stating there was an error
+            message.channel.send(error); // send a message in the channel stating there was an error
         }
     }
 }
