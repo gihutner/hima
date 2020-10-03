@@ -17,8 +17,8 @@ module.exports = {
 
             try {
   
-            const toEval = args.join(" ");
-            let evaluated = eval(toEval);
+            const code = args.join(" ");
+            let evaled = eval(code);
             
 
         const evaled = require("util").inspect(evaled);
