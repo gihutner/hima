@@ -27,7 +27,7 @@ module.exports = {
 
         } catch (error) { // if trying failed, do the following instead (if you catch an error):
             console.error(error); // log the error to console
-            message.channel.send(error); // send a message in the channel stating there was an error
+            message.channel.send('aaaa'); // send a message in the channel stating there was an error
         }
     }
 }
