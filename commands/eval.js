@@ -17,10 +17,9 @@ module.exports = {
 
             try {
 
-            const blah = "```Their Title\nBody text blah blah```"
             const toEval = args.join(" ");
             const evaluated = eval(toEval);
-            const whole_ev = inspect(evaluated);
+            const whole_ev = "```diff\naaaaa```"
 
              message.channel.send(blah);
                 console.log(inspect(evaluated));
