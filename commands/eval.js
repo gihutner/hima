@@ -16,15 +16,13 @@ module.exports = {
             
 
             try {
-  
-            const code = args.join(" ");
-            let evali = eval(code);
-            
 
-        const evaled = require("util").inspect(evaled);
+ 
+            const toEval = args.join(" ");
+            const evaluated = eval(toEval);
 
-        message.channel.send(clean(evaled), {code:"xl"});
-                console.log(clean(evaled));
+             message.channel.send(inspect(evaluated), {code:"xl"});
+                console.log(inspect(evaluated));
             // also send the same output to console. You don't have to do this but you could keep it this way if you keep console open cause eval can get lengthy and sometimes not
             // go through as channel message(message may have max. 2000 characters, console has no limit)
 
