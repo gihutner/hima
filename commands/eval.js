@@ -7,7 +7,7 @@ module.exports = {
     name: 'ev',
     description: 'eval??',
     aliases: ['eval'],
-    async execute(Client, message, args) {
+    execute(client, message, args) {
         if (message.author.id !== ownerID) {
             const member = message.mentions.users.first() || message.author;
 
@@ -16,26 +16,14 @@ module.exports = {
 
             try {
 
-
-            const toEval = args.join(" ")
             const evaluated = eval(toEval)
 
-            let embed = new Discord.MessageEmbed()
-                .setColor('#FFFEC8')
-                .setTimestamp()
-                .setDescription(inspect(evaluated))
-             message.channel.send(inspect(evaluated), { code: js });
+             message.channel.send(inspect(evaluated));
                 console.log(inspect(evaluated));
-            // also send the same output to console. You don't have to do this but you could keep it this way if you keep console open cause eval can get lengthy and sometimes not
-            // go through as channel message(message may have max. 2000 characters, console has no limit)
 
-        } catch (error) { // if trying failed, do the following instead (if you catch an error):
+        } catch (error) { 
             console.error(error); // log the error to console
-                let embed = new Discord.MessageEmbed()
-                    .setColor("#FFFEC8")
-                    .setDescription("```error```")
-
-                await message.channel.send(embed); // send a message in the channel stating there was an error
+            message.channel.send(error); // send a message in the channel stating there was an error
         }
     }
 }

@@ -1,7 +1,8 @@
 const fs = require('fs');
+// command handler
 const Discord = require('discord.js');
 const { prefix, token } = require('./config.json');
-
+// token and prefix taken from the config file, it doesn't go in index for reason, luv xx
 
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
@@ -13,7 +14,7 @@ for (const file of commandFiles) {
 }
 
 client.once('ready', async () => {
-	console.log('i\'m on beech!');
+	console.log(`i'm on beech!`);
 	let memberCount = client.guilds.cache.get('747096663037837453').memberCount
 	client.user.setActivity(`the garden..and ${memberCount} members..`, {type: 3});
 });
