@@ -5,9 +5,7 @@ module.exports = {
     name: "application",
     description: "",
     execute(message, args) {
-        const commands = message.content.split(" ")[0].substring(2);
         if (
-            commands === "application" &&
             args.length > 0 &&
             message.guild.members.cache
                 .get(message.author.id)
