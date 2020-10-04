@@ -17,7 +17,9 @@ for (const file of commandFiles) {
 client.once("ready", () => {
   console.log(`i'm on beech!`);
   let memberCount = client.guilds.cache.get("747096663037837453").memberCount;
-  client.user.setActivity(`the garden..and ${memberCount} members..`, {type: 3});
+  client.user.setActivity(`the garden..and ${memberCount} members..`, {
+    type: 3,
+  });
 });
 
 client.on("message", (message) => {
@@ -38,7 +40,7 @@ client.on("message", (message) => {
     );
   const member = message.mentions.users.first() || message.author;
   const no_perms = new Discord.MessageEmbed()
-    .setColor("#FFFBC0")s
+    .setColor("#FFFBC0")
     .setAuthor(
       `${member.username}#${message.author.discriminator}`,
       `${member.displayAvatarURL()}`
