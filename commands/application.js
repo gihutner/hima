@@ -4,8 +4,10 @@ const { prefix, token } = require("../config.json");
 module.exports = {
     name: "application",
     description: "",
-    execute(message, args) {
+    execute(client, message, args) {
+        const commands = message.content.split(" ")[0].substring(2);
         if (
+            commands === "application" &&
             args.length > 0 &&
             message.guild.members.cache
                 .get(message.author.id)
@@ -47,7 +49,7 @@ module.exports = {
             const wrong_application = new Discord.MessageEmbed().setDescription(
                 `That was the incorrect usage. Try \`;application [application info]\`.`
             );
-            message.channel.send(wrong_application);
+            message.reply(wrong_application);
         }
     },
 };
