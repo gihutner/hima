@@ -13,8 +13,6 @@ module.exports = {
                 .get(message.author.id)
                 .hasPermission("ADMINISTRATOR")
         ) {
-            const { client } = require("../index.js");
-
             const application_info = args.slice(1).join(" ");
             const the_users_name = message.mentions.users.first().username;
             const the_users_id = message.mentions.users.first().id;
@@ -43,7 +41,7 @@ module.exports = {
                 .setTimestamp();
 
             client.channels.cache
-                .get("742603951995879533")
+                .get("753663451901198386")
                 .send(application_emb);
         } else {
             const wrong_application = new Discord.MessageEmbed().setDescription(
