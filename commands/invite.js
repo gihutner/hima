@@ -4,10 +4,6 @@ module.exports = {
   name: "invite",
   aliases: ["inv"],
   execute(message, args) {
-    if (
-      message.guild.members.cache.get(message.author.id) ===
-      "660869780634468393"
-    ) {
       const invuwu = new Discord.MessageEmbed()
         .setColor("#2f3137")
         .setDescription(
