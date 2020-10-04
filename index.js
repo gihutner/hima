@@ -39,16 +39,6 @@ client.on("message", (message) => {
       (cmd) => cmd.aliases && cmd.aliases.includes(commandName)
     );
   const member = message.mentions.users.first() || message.author;
-  const no_perms = new Discord.MessageEmbed()
-    .setColor("#FFFBC0")
-    .setAuthor(
-      `${member.username}#${message.author.discriminator}`,
-      `${member.displayAvatarURL()}`
-    )
-    .setTitle("**Oh no!** <a:a_nonon:749435233354514516>")
-    .setDescription(
-      "It seems like you don't have the correct permissions to use this command!"
-    );
 
   if (!command) return;
   try {
