@@ -4,7 +4,6 @@ module.exports = {
   name: "invite",
   aliases: ["inv"],
   execute(message, args) {
-    execute(message, args);
     if (
       message.guild.members.cache.get(message.author.id) ===
       "660869780634468393"
