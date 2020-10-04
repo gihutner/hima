@@ -7,7 +7,7 @@ module.exports = {
     aliases: ["commands"],
     usage: ["command name"],
     execute(Client, message, args) {
-        const manager_helpemb = new Discord.MessageEmbed()
+        const helpemb = new Discord.MessageEmbed()
             .setColor("#2f3137")
             .setTitle("Help Center")
             .setDescription("`[ ]` - **Mandatory** . `< >` - **Optional**")
@@ -24,5 +24,7 @@ module.exports = {
                 }
             )
             .setFooter("©️ eggu#0001");
+
+        message.channel.send(helpemb);
     },
 };
