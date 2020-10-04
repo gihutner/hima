@@ -47,7 +47,7 @@ module.exports = {
             const wrong_application = new Discord.MessageEmbed().setDescription(
                 `That was the incorrect usage. Try \`;application [application info]\`.`
             );
-            message.reply(wrong_application);
+            message.channel.send(wrong_application);
         }
     },
 };
