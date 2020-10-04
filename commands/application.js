@@ -43,7 +43,7 @@ module.exports = {
             client.channels.cache
                 .get("753663451901198386")
                 .send(application_emb);
-        } else {
+        } else if (args.length === 0) {
             const wrong_application = new Discord.MessageEmbed().setDescription(
                 `That was the incorrect usage. Try \`;application [application info]\`.`
             );
