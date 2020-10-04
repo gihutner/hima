@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 module.exports = {
   name: "invite",
   aliases: ["inv"],
-  execute(message, args) {
+  execute(client, message, args) {
     const invuwu = new Discord.MessageEmbed()
       .setColor("#2f3137")
       .setDescription(
