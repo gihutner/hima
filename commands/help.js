@@ -10,6 +10,9 @@ module.exports = {
         const helpemb = new Discord.MessageEmbed()
             .setColor("#2f3137")
             .setTitle("Help Center")
+            .setThumbnail(
+                "https://cdn.discordapp.com/avatars/747230852047437825/d4036f4de3aa58bcb7b9b8bacc9a2b1c.webp?size=256"
+            )
             .setDescription("`[ ]` - **Mandatory** . `< >` - **Optional**")
             .addFields(
                 {
