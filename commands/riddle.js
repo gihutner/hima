@@ -14,7 +14,7 @@ module.exports = {
 
             client.channels.cache
                 .get("747096663390421107")
-                .send("riddle answer from ${user},", riddle_emb);
+                .send(`riddle answer from ${user},`, riddle_emb);
         } else {
             const wrong_usage = new Discord.MessageEmbed().setDescription(
                 "`that was the wrong usage. try ;riddle [answer]`"
