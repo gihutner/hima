@@ -12,6 +12,7 @@ module.exports = {
                 .setColor("#2f3137")
                 .setDescription(riddle);
 
+            message.delete();
             client.channels.cache
                 .get("747096663390421107")
                 .send(`riddle answer from ${user},`, riddle_emb);
